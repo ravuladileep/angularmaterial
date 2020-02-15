@@ -1,0 +1,78 @@
+<div class="container">
+  <form [formGroup]="registrationform" class="col-md-6" (ngSubmit)="onsubmit()">
+
+      <div class="form-group mt-5">
+        <label>username</label>
+        <input type="text" formControlName="username" class="form-control"
+        [class.is-invalid]="username.invalid && username.touched"
+        [class.is-valid]="username.valid && username.dirty">
+        <span  *ngIf="username.errors?.required && username.touched" class="text-danger ">
+          username is required</span>
+        <span *ngIf="username.errors?.minlength && username.touched" class="text-danger">
+          username must be 3 letters</span>
+      </div>
+
+      <div class="form-group">
+        <label>email</label>
+        <input type="email" formControlName="email" class="form-control"
+        [class.is-invalid]="email.invalid && email.touched"
+        [class.is-valid]="email.valid && email.dirty">
+        <span *ngIf="email.errors?.required && email.touched" class="text-danger">
+            Email is required</span>
+        <span *ngIf="email.errors?.email && email.touched" class="text-danger">
+            Enter a valid email</span>
+      </div>
+
+    <div class="form-group">
+      <label for="gender" >Gender</label>
+        <div class="form-control"
+        [class.is-invalid]="gender.invalid && gender.touched"
+        [class.is-valid]="gender.valid && gender.touched">
+          <label  class="radio-inline">
+            <input type="radio"  value="male" formControlName="gender"> Male
+          </label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <label  class="radio-inline">
+              <input type="radio" value="female" formControlName="gender"> Female
+          </label>
+        </div>
+        <span *ngIf="gender.errors?.required && gender.touched"
+         class="text-danger">gender is required</span>
+
+    </div>
+
+    <div class="form-group">
+        <label>Date of birth</label>
+        <input type="date" class="form-control" formControlName="dateofbirth"
+        [class.is-invalid]="dateofbirth.invalid && dateofbirth.touched"
+        [class.is-valid]="dateofbirth.valid && dateofbirth.dirty">
+        <span *ngIf="dateofbirth.errors?.required && dateofbirth.touched"
+         class="text-danger">please select date</span>
+    </div>
+
+    <div class="form-group">
+        <div class="form-group">
+          <label>password</label>
+          <input type="password" class="form-control" formControlName="password"
+          [class.is-invalid]='password.invalid && password.touched'
+          [class.is-valid]='password.valid && password.dirty'>
+          <span *ngIf="password.errors?.required && password.touched"
+          class="text-danger">password is required</span>
+          <span *ngIf="password.errors?.minlength && password.dirty"
+          class="text-danger">password must be atleast 6 letters</span>
+        </div>
+        <div class="form-group">
+          <label>confirmpassword</label>
+          <input type="password"  class="form-control" formControlName="confirmpassword"
+          [class.is-invalid]='confirmpassword.invalid && confirmpassword.touched'
+          [class.is-valid]='confirmpassword.valid && confirmpassword.dirty'>
+          <span *ngIf="confirmpassword.errors?.required && confirmpassword.touched"
+          class="text-danger">confirmpassword is required</span>
+          <span *ngIf="confirmpassword.errors?.mustMatch && confirmpassword.dirty"
+          class="text-danger">password doesn't match</span>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" [disabled]="registrationform.invalid" type="submit">Register</button>
+
+  </form>
+</div>

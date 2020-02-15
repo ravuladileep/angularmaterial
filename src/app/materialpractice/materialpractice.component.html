@@ -1,0 +1,77 @@
+<!-- <div class="container">
+
+  <div class="row">
+      <div class="col-md-6">
+      <h1>Buttons</h1>
+      <button mat-raised-button color="warn">warn</button>&nbsp;
+      <button mat-raised-button color="accent">accent</button>&nbsp;
+      <button mat-raised-button color="primary">primary</button>&nbsp;<br><br>
+
+
+      <button mat-flat-button>flat button</button>
+      <button mat-stroked-button>stroked button</button><br><br>
+
+      <button class="mat-icon-button">icon</button>
+      <button class="mat-fab">fab</button>
+      <button class="mat-mini-fab">minifab</button>
+
+      <div class="mat-headline">this is h1</div>
+      <div class="mat-title">this is h2</div>
+      <div class="mat-subheading-2">this is h3</div>
+      <div class="mat-subheading-1">this is h4</div>
+      <br>
+      <br>
+      <div class="mat-body-1">body text</div>
+      <div class="mat-body-2">body bold</div>
+      <div class="mat-caption">this is caption</div>
+
+      </div>
+      <div class="col-md-6">
+          <div class="mat-display-4">display-4</div>
+          <div class="mat-display-3">display-3</div>
+          <div class="mat-display-2">display-2</div>
+          <div class="mat-display-1">display-1</div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+          <div class="mat-typography">
+              <h1>iam h1</h1>
+              <h2>iam h2</h2>
+              <h3>iam h3</h3>
+              <h4>iam h4</h4>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <mat-button-toggle-group #group="matButtonToggleGroup" multiple >
+            <mat-button-toggle value="angular">Angular</mat-button-toggle>
+            <mat-button-toggle value="vue">vue</mat-button-toggle>
+            <mat-button-toggle value="react">react</mat-button-toggle>
+        </mat-button-toggle-group>
+        {{group.value}}
+        <br><br>
+        <mat-icon color="primary">build</mat-icon>
+      </div>
+  </div>
+
+</div> -->
+
+<!-- <div class="container">
+  <form>
+    <mat-form-field>
+      <input type="text" matInput [formControl]="mycontrol" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]='displayfn'>
+        <mat-option *ngFor ='let option of filteredoptions | async' [value]='option'>
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>
+
+<div class="container">
+<button mat-raised-button color="primary" (click)='opensnackbar("item deleted","undo")'>snackbar</button>
+</div> -->

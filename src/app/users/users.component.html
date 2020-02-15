@@ -1,0 +1,23 @@
+
+<div class="form-group mt-5">
+  <input type="text" class="form-control" placeholder="Search By Name"
+  style="width: 300px;" [(ngModel)]="searchterm">
+</div>
+
+  <table class="table table-bordered table-striped  table-hover mt-5">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>age</th>
+    </tr>
+    <tr *ngFor = "let user of users|paginate: { itemsPerPage: count, currentPage: p }  | userfilter:searchterm">
+      <td><a [routerLink]="['/users', user.id]" routerLinkActive="router-link-active" >{{user.id}}</a></td>
+      <td>{{user.employee_name}}</td>
+      <td>{{user.employee_salary}}</td>
+      <td>{{user.employee_age}}</td>
+    </tr>
+  </table>
+  <div class="text-right">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>

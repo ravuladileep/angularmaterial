@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "username": "dileep",
+      "email": "dilei@gmail.com",
+      "gender": "male",
+      "dateofbirth": "2019-01-01",
+      "password": "dileep",
+      "confirmpassword": "dileep",
+      "id": 1
+    },
+    {
+      "username": "dileep",
+      "email": "jd@gmail.com",
+      "gender": "male",
+      "dateofbirth": "2019-01-01",
+      "password": "dileep",
+      "confirmpassword": "dileep",
+      "id": 2
+    },
+    {
+      "username": "ghjk",
+      "email": "j@g",
+      "gender": "male",
+      "dateofbirth": "2019-01-01",
+      "password": "laptop",
+      "confirmpassword": "laptop",
+      "id": 3
+    },
+    {
+      "username": "jdjd",
+      "email": "ljgdk@g",
+      "gender": "male",
+      "dateofbirth": "2019-01-01",
+      "password": "dileep",
+      "confirmpassword": "dileep",
+      "id": 4
+    },
+    {
+      "username": "kkkk",
+      "email": "kkk@j",
+      "gender": "male",
+      "dateofbirth": "2019-01-02",
+      "password": "dileep",
+      "confirmpassword": "dileep",
+      "id": 5
+    },
+    {
+      "username": "jjjjjjj",
+      "email": "jj@j",
+      "gender": "male",
+      "dateofbirth": "2019-01-01",
+      "password": "jileep",
+      "confirmpassword": "jileep",
+      "id": 6
+    }
+  ]
+}
